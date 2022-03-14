@@ -3,8 +3,8 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/ui/main.lua"))()
 ```
 <br/>
-<h2>supports:</h2>
+# supports:
 - synx
 - krnl
 - sw
-+ any exploit with getsynasset or getcustomasset</h3> <br/>
++ any exploit with getsynasset or getcustomasset
