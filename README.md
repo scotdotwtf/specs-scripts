@@ -6,4 +6,5 @@
 - any exploit with getsynasset or getcustomasset </br></br>
 
 ```lua
-loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/ui/main.lua"))()```
+loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/ui/main.lua"))()
+```
