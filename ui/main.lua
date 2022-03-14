@@ -400,11 +400,11 @@ makebtn("specs keyboard", "all on me", "rbxassetid://75420967", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/lua-projects/main/small%20projects/specs%20keyboard/keyboard.lua"))()
 end)
 
-makebtn("funni fard scrip (just grass only)", "cola's cause he did wrote the code faster than me", getasset("specsscriptsfolder/7.png"), function()
+makebtn("funni fard scrip (just grass only)", "cola's cause he did wrote the code faster than me", getasset("specsscriptsfolder/10.png"), function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/scripts/funni%20fard%20scrip.lua"))()
 end)
 
-makebtn("just blue grass", "me", getasset("specsscriptsfolder/8.png"), function()
+makebtn("just blue grass", "me", getasset("specsscriptsfolder/7.png"), function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/scripts/just%20blue%20grass.lua"))()
 end)
 
@@ -412,7 +412,7 @@ makebtn("silent -re (just grass)", "me me", getasset("specsscriptsfolder/9.png")
     loadstring(game:HttpGet("http://www.roblox.com/asset/?id=9102625394"))()
 end)
 
-makebtn("simple just grass dupe", "using cola's drop stay method", getasset("specsscriptsfolder/10.png"), function()
+makebtn("simple just grass dupe", "using cola's drop stay method", getasset("specsscriptsfolder/8.png"), function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/scripts/simple%20just%20grass%20drop%20dupe.lua"))()
 end)
 
