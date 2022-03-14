@@ -302,6 +302,20 @@ local function makebtn(name, creds, imag, scrip)
 end
 
 --// scripts
+
+
+makefolder("specsscriptsfolder")
+writefile("specsscriptsfolder/1.png", game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/images/1abduct.png"))
+writefile("specsscriptsfolder/2.png", game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/images/2goose.png"))
+writefile("specsscriptsfolder/3.png", game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/images/3lolhoo.png"))
+writefile("specsscriptsfolder/4.png", game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/images/42016.png"))
+writefile("specsscriptsfolder/5.png", game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/images/4purple2016.png"))
+writefile("specsscriptsfolder/6.png", game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/images/5shark.png"))
+writefile("specsscriptsfolder/7.png", game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/images/6purple.png"))
+writefile("specsscriptsfolder/8.png", game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/images/7drop.png"))
+writefile("specsscriptsfolder/9.png", game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/images/8silentre.png"))
+writefile("specsscriptsfolder/10.png", game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/images/9fard.png"))
+
 close.MouseButton1Click:Connect(function()
     specsscripts:Destroy()
 end)
@@ -320,65 +334,65 @@ end)
 
 spawn(function()
 	local UIS = game:GetService("UserInputService")
-	function dragify(Frame)
-		dragToggle = nil
-		local dragSpeed = 0.125
-		dragInput = nil
-		dragStart = nil
-		local dragPos = nil
-		function updateInput(input)
-			local Delta = input.Position - dragStart
-			local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
-			game:GetService("TweenService"):Create(Frame, TweenInfo.new(dragSpeed), {Position = Position}):Play()
+	function normal_dragify(Frame)
+		ndragToggle = nil
+		local ndragSpeed = 0.125
+		ndragInput = nil
+		ndragStart = nil
+		local ndragPos = nil
+		function nupdateInput(input)
+			local nDelta = input.Position - ndragStart
+			local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + nDelta.X, startPos.Y.Scale, startPos.Y.Offset + nDelta.Y)
+			game:GetService("TweenService"):Create(Frame, TweenInfo.new(ndragSpeed), {Position = Position}):Play()
 		end
 		Frame.InputBegan:Connect(function(input)
 			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
-				dragToggle = true
-				dragStart = input.Position
+				ndragToggle = true
+				ndragStart = input.Position
 				startPos = Frame.Position
 				input.Changed:Connect(function()
 					if input.UserInputState == Enum.UserInputState.End then
-						dragToggle = false
+						ndragToggle = false
 					end
 				end)
 			end
 		end)
 		Frame.InputChanged:Connect(function(input)
 			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-				dragInput = input
+				ndragInput = input
 			end
 		end)
 		game:GetService("UserInputService").InputChanged:Connect(function(input)
-			if input == dragInput and dragToggle then
-				updateInput(input)
+			if input == ndragInput and ndragToggle then
+				nupdateInput(input)
 			end
 		end)
 	end
 
-    dragify(hold)
+    normal_dragify(hold)
 end)
 
-makebtn("Alien Abduction", "creds to neil for giving simple aling method", "http://www.roblox.com/asset/?id=9102618998", function()
+makebtn("Alien Abduction", "creds to neil for giving simple aling method", getsynasset("specsscriptsfolder/1.png"), function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/scripts/Alien%20Abduction%20(R15).lua"))()
 end)
 
-makebtn("Goose Quote", "no additional creds needed", "http://www.roblox.com/asset/?id=9102619716", function()
+makebtn("Goose Quote", "no additional creds needed", getsynasset("specsscriptsfolder/2.png"), function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/scripts/Goose%20Quote%20repo.lua"))()
 end)
 
-makebtn("LOLHOO (fd)", "mod of the c00lkidd script", "http://www.roblox.com/asset/?id=9102620378", function()
+makebtn("LOLHOO (fd)", "mod of the c00lkidd script", getsynasset("specsscriptsfolder/3.png"), function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/scripts/LOLHOO%20(fd).lua"))()
 end)
 
-makebtn("Epic 2016", "creds to neil for giving simple aling method", "http://www.roblox.com/asset/?id=9102623144", function()
+makebtn("Epic 2016", "creds to neil for giving simple aling method", getsynasset("specsscriptsfolder/4.png"), function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/scripts/epic%202016%20remastered.lua"))()
 end)
 
-makebtn("Epic 2016 (specs preset)", "creds to neil for giving simple aling method", "http://www.roblox.com/asset/?id=9102622002", function()
+makebtn("Epic 2016 (specs preset)", "creds to neil for giving simple aling method", getsynasset("specsscriptsfolder/5.png"), function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/scripts/epic%202016%20remastered%20with%20specs%20preset.lua"))()
 end)
 
-makebtn("sharkswap", "the vis was based off of hat spin", "http://www.roblox.com/asset/?id=9102623791", function()
+makebtn("sharkswap", "the vis was based off of hat spin", getsynasset("specsscriptsfolder/6.png"), function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/lua-projects/main/small%20projects/sharkswap/src.lua"))()
 end)
 
@@ -386,19 +400,19 @@ makebtn("specs keyboard", "all on me", "rbxassetid://75420967", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/lua-projects/main/small%20projects/specs%20keyboard/keyboard.lua"))()
 end)
 
-makebtn("funni fard scrip (just grass only)", "cola's cause he did wrote the code faster than me", "http://www.roblox.com/asset/?id=9102753243", function()
+makebtn("funni fard scrip (just grass only)", "cola's cause he did wrote the code faster than me", getsynasset("specsscriptsfolder/7.png"), function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/scripts/funni%20fard%20scrip.lua"))()
 end)
 
-makebtn("just blue grass", "me", "http://www.roblox.com/asset/?id=9102624718", function()
+makebtn("just blue grass", "me", getsynasset("specsscriptsfolder/8.png"), function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/scripts/just%20blue%20grass.lua"))()
 end)
 
-makebtn("silent -re (just grass)", "me me", "http://www.roblox.com/asset/?id=9102625770", function()
+makebtn("silent -re (just grass)", "me me", getsynasset("specsscriptsfolder/9.png"), function()
     loadstring(game:HttpGet("http://www.roblox.com/asset/?id=9102625394"))()
 end)
 
-makebtn("simple just grass dupe", "using cola's drop stay method", "http://www.roblox.com/asset/?id=9102625394", function()
+makebtn("simple just grass dupe", "using cola's drop stay method", getsynasset("specsscriptsfolder/10.png"), function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/scripts/simple%20just%20grass%20drop%20dupe.lua"))()
 end)
 
