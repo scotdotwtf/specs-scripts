@@ -3,7 +3,7 @@
   - synx </br>
 - krnl </br>
 - sw </br>
-- any exploit with getsynasset or getcustomasset </br>
+- any exploit with getsynasset or getcustomasset </br></br>
 
 ```lua
 loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/ui/main.lua"))()```
