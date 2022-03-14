@@ -4,7 +4,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/specs-script
 ```
 <br/>
 <h2>supports:</h2>
-<h3>  - synx</h3>
-<h3>  - krnl</h3>
-<h3>  - sw</h3>
-<h3>  + any exploit with getsynasset or getcustomasset</h3> <br/>
+- synx
+- krnl
+- sw
++ any exploit with getsynasset or getcustomasset</h3> <br/>
