@@ -1,9 +1,10 @@
---// Hat needed: https://www.roblox.com/catalog/8151404994/Hovering-UFO
+print("Hat needed: https://www.roblox.com/catalog/8151404994/Hovering-UFO")
 
 local me = game:GetService("Players").LocalPlayer.Character.UpperTorso
 
 me.Waist:Destroy()
 me.Anchored = true
+game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass('Humanoid').HipHeight = 3
 
 local chr = game:GetService("Players").LocalPlayer.Character
 
@@ -15,7 +16,7 @@ for i,v in next, chr:GetDescendants() do
     end
 end
 
-local custompos = Vector3.new(0, -0.5, 0)
+local custompos = Vector3.new(0, -0.75, 0)
 local customrot = Vector3.new(0, 0, 0)
 
 local tool = game:GetService("Players").LocalPlayer.Character["UFO"]
@@ -47,4 +48,4 @@ local function weld(part0, part1, att1)
     AO.Responsiveness = math.huge / 9e110
 end
 
-weld(tool.Handle, game:GetService("Players").LocalPlayer.Character["HumanoidRootPart"], game:GetService("Players").LocalPlayer.Character["HumanoidRootPart"].RootRigAttachment)
+weld(tool.Handle, game:GetService("Players").LocalPlayer.Character["LowerTorso"], game:GetService("Players").LocalPlayer.Character["LowerTorso"].WaistCenterAttachment)
