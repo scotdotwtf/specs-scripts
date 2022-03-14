@@ -302,7 +302,7 @@ local function makebtn(name, creds, imag, scrip)
 end
 
 --// scripts
-
+local getasset = getsynasset or getcustomasset
 
 makefolder("specsscriptsfolder")
 writefile("specsscriptsfolder/1.png", game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/images/1abduct.png"))
@@ -372,27 +372,27 @@ spawn(function()
     normal_dragify(hold)
 end)
 
-makebtn("Alien Abduction", "creds to neil for giving simple aling method", getsynasset("specsscriptsfolder/1.png"), function()
+makebtn("Alien Abduction", "creds to neil for giving simple aling method", getasset("specsscriptsfolder/1.png"), function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/scripts/Alien%20Abduction%20(R15).lua"))()
 end)
 
-makebtn("Goose Quote", "no additional creds needed", getsynasset("specsscriptsfolder/2.png"), function()
+makebtn("Goose Quote", "no additional creds needed", getasset("specsscriptsfolder/2.png"), function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/scripts/Goose%20Quote%20repo.lua"))()
 end)
 
-makebtn("LOLHOO (fd)", "mod of the c00lkidd script", getsynasset("specsscriptsfolder/3.png"), function()
+makebtn("LOLHOO (fd)", "mod of the c00lkidd script", getasset("specsscriptsfolder/3.png"), function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/scripts/LOLHOO%20(fd).lua"))()
 end)
 
-makebtn("Epic 2016", "creds to neil for giving simple aling method", getsynasset("specsscriptsfolder/4.png"), function()
+makebtn("Epic 2016", "creds to neil for giving simple aling method", getasset("specsscriptsfolder/4.png"), function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/scripts/epic%202016%20remastered.lua"))()
 end)
 
-makebtn("Epic 2016 (specs preset)", "creds to neil for giving simple aling method", getsynasset("specsscriptsfolder/5.png"), function()
+makebtn("Epic 2016 (specs preset)", "creds to neil for giving simple aling method", getasset("specsscriptsfolder/5.png"), function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/scripts/epic%202016%20remastered%20with%20specs%20preset.lua"))()
 end)
 
-makebtn("sharkswap", "the vis was based off of hat spin", getsynasset("specsscriptsfolder/6.png"), function()
+makebtn("sharkswap", "the vis was based off of hat spin", getasset("specsscriptsfolder/6.png"), function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/lua-projects/main/small%20projects/sharkswap/src.lua"))()
 end)
 
@@ -400,19 +400,19 @@ makebtn("specs keyboard", "all on me", "rbxassetid://75420967", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/lua-projects/main/small%20projects/specs%20keyboard/keyboard.lua"))()
 end)
 
-makebtn("funni fard scrip (just grass only)", "cola's cause he did wrote the code faster than me", getsynasset("specsscriptsfolder/7.png"), function()
+makebtn("funni fard scrip (just grass only)", "cola's cause he did wrote the code faster than me", getasset("specsscriptsfolder/7.png"), function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/scripts/funni%20fard%20scrip.lua"))()
 end)
 
-makebtn("just blue grass", "me", getsynasset("specsscriptsfolder/8.png"), function()
+makebtn("just blue grass", "me", getasset("specsscriptsfolder/8.png"), function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/scripts/just%20blue%20grass.lua"))()
 end)
 
-makebtn("silent -re (just grass)", "me me", getsynasset("specsscriptsfolder/9.png"), function()
+makebtn("silent -re (just grass)", "me me", getasset("specsscriptsfolder/9.png"), function()
     loadstring(game:HttpGet("http://www.roblox.com/asset/?id=9102625394"))()
 end)
 
-makebtn("simple just grass dupe", "using cola's drop stay method", getsynasset("specsscriptsfolder/10.png"), function()
+makebtn("simple just grass dupe", "using cola's drop stay method", getasset("specsscriptsfolder/10.png"), function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/scripts/simple%20just%20grass%20drop%20dupe.lua"))()
 end)
 
