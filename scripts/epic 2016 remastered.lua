@@ -5,6 +5,8 @@ if not game:IsLoaded() then
 end
 wait()
 
+local executor = syn and "Synapse X" or KRNL_LOADED and "Krnl" or getexecutorname and getexecutorname() == "ScriptWare" or is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or secure_load and "Sentinel" or SONA_LOADED and "Sona" or "Unknown Exploit"
+
 --// instances
 local cc = Instance.new("ColorCorrectionEffect")
 local lighting = game:GetService("Lighting")
@@ -24,7 +26,11 @@ cc.Parent = game.Lighting
 cc.Saturation = -0.1
 cc.Contrast = -0.1
 lighting.GlobalShadows = false
-setscriptable(lighting, "Technology", true) lighting.Technology = Enum.Technology.Compatibility
+
+if not executor == "ScriptWare" then
+	setscriptable(lighting, "Technology", true) lighting.Technology = Enum.Technology.Compatibility
+end
+
 settings().Rendering.QualityLevel = 7
 
 --// load old gui
