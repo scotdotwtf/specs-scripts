@@ -384,11 +384,11 @@ makebtn("LOLHOO (fd)", "mod of the c00lkidd script", getasset("specsscriptsfolde
     loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/scripts/LOLHOO%20(fd).lua"))()
 end)
 
-makebtn("Epic 2016", "creds to neil for giving simple aling method", getasset("specsscriptsfolder/4.png"), function()
+makebtn("Epic 2016", "cola helped me with 2016 gui", getasset("specsscriptsfolder/4.png"), function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/scripts/epic%202016%20remastered.lua"))()
 end)
 
-makebtn("Epic 2016 (specs preset)", "creds to neil for giving simple aling method", getasset("specsscriptsfolder/5.png"), function()
+makebtn("Epic 2016 (specs preset)", "cola helped me with 2016 gui", getasset("specsscriptsfolder/5.png"), function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/scripts/epic%202016%20remastered%20with%20specs%20preset.lua"))()
 end)
 
@@ -400,7 +400,7 @@ makebtn("specs keyboard", "all on me", "rbxassetid://75420967", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/lua-projects/main/small%20projects/specs%20keyboard/keyboard.lua"))()
 end)
 
-makebtn("funni fard scrip (just grass only)", "cola's cause he did wrote the code faster than me", getasset("specsscriptsfolder/10.png"), function()
+makebtn("funni fard scrip (just grass only)", "my idea, cola wrote, i fixed", getasset("specsscriptsfolder/10.png"), function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/scripts/funni%20fard%20scrip.lua"))()
 end)
 
