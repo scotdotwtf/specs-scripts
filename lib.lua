@@ -1,4 +1,4 @@
-print([[
+--[[
 
   ██████  ██▓███  ▓█████  ▄████▄  
 ▒██    ▒ ▓██░  ██▒▓█   ▀ ▒██▀ ▀█  
@@ -10,10 +10,7 @@ print([[
 ░  ░  ░  ░░          ░   ░        
       ░              ░  ░░ ░      
                          ░        
-]])
-
---// bugs blur method
-local Blur = loadstring(game:HttpGet("https://raw.githubusercontent.com/0zBug/Misc/main/Blur.lua"))()
+]]
 
 --// make
 local specsscripts = Instance.new("ScreenGui")
@@ -37,6 +34,8 @@ local rpadding = Instance.new("UIPadding")
 local hcorner = Instance.new("UICorner")
 local rstroke = Instance.new("UIStroke")
 local gradient = Instance.new("UIGradient")
+local rstroke2 = Instance.new("UIStroke")
+local gradient2 = Instance.new("UIGradient")
 
 hcorner.CornerRadius = UDim.new(0, 6)
 hcorner.Name = "hcorner"
@@ -47,6 +46,13 @@ rstroke.Name = "rstroke"
 rstroke.Color = Color3.new(255, 255, 255)
 
 gradient.Parent = rstroke
+
+rstroke2.Parent = hold
+rstroke2.Name = "rstroke"
+rstroke2.Color = Color3.new(255, 255, 255)
+rstroke2.Enabled = false
+
+gradient2.Parent = rstroke2
 
 spawn(function()
 	local counter = 0
@@ -62,6 +68,7 @@ spawn(function()
 				table.insert(CS, i+1, ColorSequenceKeypoint.new(i/num, c))
 			end
 			gradient.Color = ColorSequence.new(CS)
+			gradient2.Color = ColorSequence.new(CS)
 			CS = {}
 			counter = counter + math.pi/40
 			if (counter >= math.pi * 2) then
@@ -73,6 +80,7 @@ spawn(function()
 		end
 		frames = frames + 1
 		gradient.Rotation = gradient.Rotation + 1
+		gradient2.Rotation = gradient2.Rotation + 1
 	end)
 end)
 
@@ -95,12 +103,7 @@ bg.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
 bg.BackgroundTransparency = 0.350
 bg.BorderSizePixel = 0
 bg.Size = UDim2.new(0, 559, 0, 334)
-bg.ZIndex = 0
-
-Blur:BindFrame(bg, {
-    Transparency = 0.35, Material = Enum.Material.Glass, BrickColor = BrickColor.new('White')
-})
-
+bg.ZIndex = -5
 
 scroll.Name = "scroll"
 scroll.Parent = bg
@@ -299,61 +302,64 @@ local function makebtn(name, creds, imag, scrip)
 end
 
 --// scripts
+local getasset = getsynasset or getcustomasset --// Use this for custom images
+
 close.MouseButton1Click:Connect(function()
-    hold.Position = UDim2.new(10, 0, 10, 0)
-    wait()
+    specsscripts:Destroy()
 end)
 
 mini.MouseButton1Click:Connect(function()
     if bg.Visible == true then
         hold.Transparency = 0.5
         bg.Visible = false
+        rstroke2.Enabled = true
     else
         hold.Transparency = 1
         bg.Visible = true
+        rstroke2.Enabled = false
     end
 end)
 
 spawn(function()
 	local UIS = game:GetService("UserInputService")
-	function dragify(Frame)
-		dragToggle = nil
-		local dragSpeed = 0.125
-		dragInput = nil
-		dragStart = nil
-		local dragPos = nil
-		function updateInput(input)
-			local Delta = input.Position - dragStart
-			local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
-			game:GetService("TweenService"):Create(Frame, TweenInfo.new(dragSpeed), {Position = Position}):Play()
+	function normal_dragify(Frame)
+		ndragToggle = nil
+		local ndragSpeed = 0.125
+		ndragInput = nil
+		ndragStart = nil
+		local ndragPos = nil
+		function nupdateInput(input)
+			local nDelta = input.Position - ndragStart
+			local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + nDelta.X, startPos.Y.Scale, startPos.Y.Offset + nDelta.Y)
+			game:GetService("TweenService"):Create(Frame, TweenInfo.new(ndragSpeed), {Position = Position}):Play()
 		end
 		Frame.InputBegan:Connect(function(input)
 			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
-				dragToggle = true
-				dragStart = input.Position
+				ndragToggle = true
+				ndragStart = input.Position
 				startPos = Frame.Position
 				input.Changed:Connect(function()
 					if input.UserInputState == Enum.UserInputState.End then
-						dragToggle = false
+						ndragToggle = false
 					end
 				end)
 			end
 		end)
 		Frame.InputChanged:Connect(function(input)
 			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-				dragInput = input
+				ndragInput = input
 			end
 		end)
 		game:GetService("UserInputService").InputChanged:Connect(function(input)
-			if input == dragInput and dragToggle then
-				updateInput(input)
+			if input == ndragInput and ndragToggle then
+				nupdateInput(input)
 			end
 		end)
 	end
 
-    dragify(hold)
+    normal_dragify(hold)
 end)
 
-makebtn("hi mom", "by me", "rbxassetid://6736905584", function()
-    print("Hello World!")
+makebtn("Hello World!", "Description", getasset("rbxassetid://6736905584"), function()
+    print("hi mom :)")
 end)
