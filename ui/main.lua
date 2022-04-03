@@ -315,6 +315,7 @@ writefile("specsscriptsfolder/7.png", game:HttpGet("https://raw.githubuserconten
 writefile("specsscriptsfolder/8.png", game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/images/7drop.png"))
 writefile("specsscriptsfolder/9.png", game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/images/8silentre.png"))
 writefile("specsscriptsfolder/10.png", game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/images/9fard.png"))
+writefile("specsscriptsfolder/11.png", game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/images/10nerd.png"))
 
 close.MouseButton1Click:Connect(function()
     specsscripts:Destroy()
@@ -414,5 +415,9 @@ end)
 
 makebtn("simple just grass dupe", "using cola's drop stay method", getasset("specsscriptsfolder/8.png"), function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/scripts/simple%20just%20grass%20drop%20dupe.lua"))()
+end)
+
+makebtn("nerd script 🤓", "nerd people (hats 9120783085)", getasset("specsscriptsfolder/11.png"), function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/3-cool-scripts-repo/main/(3cs)%20part%202/GUI.lua"))()
 end)
 
