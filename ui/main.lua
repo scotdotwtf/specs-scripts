@@ -418,6 +418,6 @@ makebtn("simple just grass dupe", "using cola's drop stay method", getasset("spe
 end)
 
 makebtn("nerd script 🤓", "nerd people (hats 9120783085)", getasset("specsscriptsfolder/11.png"), function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/3-cool-scripts-repo/main/(3cs)%20part%202/GUI.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/lua-projects/main/be-nerded/nerd.lua",true))()
 end)
 
