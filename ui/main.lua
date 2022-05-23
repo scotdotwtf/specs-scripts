@@ -410,7 +410,7 @@ makebtn("just blue grass", "me", getasset("specsscriptsfolder/7.png"), function(
 end)
 
 makebtn("silent -re (just grass)", "me me", getasset("specsscriptsfolder/9.png"), function()
-    loadstring(game:HttpGet("http://www.roblox.com/asset/?id=9102625394"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/specs-scripts/main/scripts/just%20grass%20silent%20-re.lua"))()
 end)
 
 makebtn("simple just grass dupe", "using cola's drop stay method", getasset("specsscriptsfolder/8.png"), function()
